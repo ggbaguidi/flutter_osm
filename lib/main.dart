@@ -34,47 +34,49 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // init the position using the user location
     final mapController = MapController.withUserPosition(
-        trackUserLocation: const UserTrackingOption(
-      enableTracking: true,
-      unFollowUser: false,
-    ));
+      trackUserLocation: const UserTrackingOption(
+        enableTracking: true,
+        unFollowUser: false,
+      ),
+    );
 
     return Scaffold(
       appBar: AppBar(
         title: const Text("My Map"),
       ),
       body: OSMFlutter(
-          controller: mapController,
-          osmOption: OSMOption(
-            userTrackingOption: const UserTrackingOption(
-              enableTracking: true,
-              unFollowUser: false,
-            ),
-            zoomOption: const ZoomOption(
-              initZoom: 8,
-              minZoomLevel: 3,
-              maxZoomLevel: 19,
-              stepZoom: 1.0,
-            ),
-            userLocationMarker: UserLocationMaker(
-              personMarker: const MarkerIcon(
-                icon: Icon(
-                  Icons.location_history_rounded,
-                  color: Colors.red,
-                  size: 48,
-                ),
-              ),
-              directionArrowMarker: const MarkerIcon(
-                icon: Icon(
-                  Icons.double_arrow,
-                  size: 48,
-                ),
+        controller: mapController,
+        osmOption: OSMOption(
+          userTrackingOption: const UserTrackingOption(
+            enableTracking: true,
+            unFollowUser: false,
+          ),
+          zoomOption: const ZoomOption(
+            initZoom: 8,
+            minZoomLevel: 3,
+            maxZoomLevel: 19,
+            stepZoom: 1.0,
+          ),
+          userLocationMarker: UserLocationMaker(
+            personMarker: const MarkerIcon(
+              icon: Icon(
+                Icons.location_history_rounded,
+                color: Colors.red,
+                size: 48,
               ),
             ),
-            roadConfiguration: const RoadOption(
-              roadColor: Colors.yellowAccent,
+            directionArrowMarker: const MarkerIcon(
+              icon: Icon(
+                Icons.double_arrow,
+                size: 48,
+              ),
             ),
-          )),
+          ),
+          roadConfiguration: const RoadOption(
+            roadColor: Colors.yellowAccent,
+          ),
+        ),
+      ),
     );
   }
 }
