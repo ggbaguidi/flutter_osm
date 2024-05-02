@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
             unFollowUser: false,
           ),
           zoomOption: const ZoomOption(
-            initZoom: 8,
+            initZoom: 15,
             minZoomLevel: 3,
             maxZoomLevel: 19,
             stepZoom: 1.0,
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
             personMarker: const MarkerIcon(
               icon: Icon(
                 Icons.location_history_rounded,
-                color: Colors.red,
+                color: Colors.blue,
                 size: 48,
               ),
             ),
