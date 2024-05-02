@@ -38,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
         enableTracking: true,
         unFollowUser: false,
       ),
+      useExternalTracking: true,
     );
 
     return Scaffold(
