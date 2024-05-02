@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("My Map"),
+        title: Text(widget.title),
       ),
       body: OSMFlutter(
         controller: mapController,
