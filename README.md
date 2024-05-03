@@ -11,3 +11,9 @@ The use of the data is free under the “Open Data Commons Open Database License
 ### Goal
 
 Learn how use it on my flutter application
+
+### Installation
+
+```bash
+flutter pub add flutter_osm_plugin
+```
